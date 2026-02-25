@@ -187,40 +187,30 @@
 }
 
 .page3 {
+    position: relative;
     height : 150vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-for-food-service-takeout-catering-deli-smoothies-coffee-desserts.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    
 }
 .boxes3 {
     display: flex;
     width : 70%;
+    height : 400px;
     gap : 20px;
-}
-.card3, .card2, .card1{
-    display: flex;
     align-items: center;
     justify-content: center;
-    width : 33%;
-    height: 300px;
-    font-size: 24px;
-    border-radius: 15px;
-    background-color: rgb(231 223 211 / 40%);
-    backdrop-filter: blur(15px);
 }
 
-.page3:has(.card2:hover){
+
+/* .page3:has(.card2:hover){
     background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-meat-poultry-seafood-mince-steak-chicken-and-more.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    transition: 0.4s ease-in;
+    transition: 0.1s ease-in;
 }
 .page3:has(.card3:hover){
     background-image: url("https://yucca.co.za/wp-content/uploads/2025/11/yucca-packaging-agriculture-strawberry-blueberry-gooseberry-grapes-kiwi-avo.jpg");
@@ -228,21 +218,121 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    transition: 0.4s ease-in;
+    transition: 0.1s ease-in;
+
+} */
+.images {
+    position: absolute;
+    top : 0;
+    bottom : 0;
+    left : 0; 
+    right : 0;
+    z-index: -1;
+}
+.im1 {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+.im2, .im3{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+.card3, .card2, .card1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 33%;
+    height : 300px;
+    font-size: 24px;
+    border-radius: 15px;
+    background-color: rgb(231 223 211 / 40%);
+    backdrop-filter: blur(15px);
+    transition: opacity 0.3s ease;
+}
+.card1:hover{
+    height : 380px;
+    width : 400px;
+    
+}
+.card2:hover{
+    height : 380px;
+    width : 400px;
+}
+.card3:hover{
+    height : 380px;
+    width : 400px;
+}
+
+.card2:hover ~ .images .im2{
+    opacity: 1;
+    /* transform: scaleY(90%); */
+}
+.card3:hover ~ .images .im3{
+    opacity: 1;
+    /* transform: scaleY(97%); */
+}
+
+.front2 {
+    opacity: 1;
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.back2 {
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.4s ease-in;
+    border-radius : 15px;
+}
+.card1:hover .back2{
+    opacity: 1;
 
 }
-.page3:has(.card1:hover){
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-for-food-service-takeout-catering-deli-smoothies-coffee-desserts.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transition: 0.4s ease-in-out;
+.card1:hover .back2 .lines {
+    font-size: 16px;
 }
-.card1:hover {
+.lines {
+    font-size: 14px;
+}
+.head1 {
+    font-size: 32px;
+    margin-left : 20px;
+    margin-top : 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transform: translate(0);
+}
+.head1 p {
+      transform: translateY(100%);
+}
 
+.lines {
+    left: 20px;
+    margin-left : 20px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    transform: translate(0);
+}
+
+.lines p {
+    
+    transform: translateY(100%);
+}
+.back2:hover p {
+    transition: 0.5s ease;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .page4{
     height: 100vh;
 }
+
