@@ -148,7 +148,7 @@
     opacity : 0;
 }
 
-/*page-2*/
+/*page-2---------------------------------------------------------------------------------*/
 
 .page2 {
     display: flex;
@@ -204,23 +204,7 @@
 }
 
 
-/* .page3:has(.card2:hover){
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-meat-poultry-seafood-mince-steak-chicken-and-more.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transition: 0.1s ease-in;
-}
-.page3:has(.card3:hover){
-    background-image: url("https://yucca.co.za/wp-content/uploads/2025/11/yucca-packaging-agriculture-strawberry-blueberry-gooseberry-grapes-kiwi-avo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transition: 0.1s ease-in;
-
-} */
+/*-------------------------------------------page3-----------------------------------------------------*/
 .images {
     position: absolute;
     top : 0;
@@ -242,7 +226,7 @@
     transition: 0.5s ease;
 }
 
-.card3, .card2, .card1{
+.cards{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,25 +238,22 @@
     backdrop-filter: blur(15px);
     transition: opacity 0.3s ease;
 }
-.card1:hover{
-    height : 380px;
-    width : 400px;
-    
-}
-.card2:hover{
+.cards:hover {
     height : 380px;
     width : 400px;
 }
-.card3:hover{
-    height : 380px;
-    width : 400px;
+#c2:hover {
+    width : 420px;
+}
+#c3:hover {
+    width: 430px;
 }
 
-.card2:hover ~ .images .im2{
+#c2:hover ~ .images .im2{
     opacity: 1;
     /* transform: scaleY(90%); */
 }
-.card3:hover ~ .images .im3{
+#c3:hover ~ .images .im3{
     opacity: 1;
     /* transform: scaleY(97%); */
 }
@@ -292,11 +273,11 @@
     transition: opacity 0.4s ease-in;
     border-radius : 15px;
 }
-.card1:hover .back2{
+.cards:hover .back2{
     opacity: 1;
-
 }
-.card1:hover .back2 .lines {
+
+.cards:hover .back2 .lines {
     font-size: 16px;
 }
 .lines {
@@ -332,7 +313,84 @@
     opacity: 1;
 }
 
+
+
+/*---------------------------------------------------page4------------------------------*/
+
 .page4{
-    height: 100vh;
+    height: 110vh;
+    background-color: #FFFDF5;
+    display: flex;
+    flex-direction: column;
+}
+.con {
+    flex: 3;
+    display: flex;
+    border-bottom: 1px solid #A8A8A7;
+}
+#section-3{
+    border :none;
+}
+.sec1 {
+    display: flex;
+    align-items: center;
+    flex: 7;
+    margin-left : 100px;
+    font-size: 26px;
+}
+#header {
+    font-size: 50px;
+    font-weight: 400;
+}
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    flex : 5;
+    justify-content: center;
+    font-size: 16px;
+    margin-right : 100px;
+}
+.about-but{
+    width : 80px;
+    height : 30px;
+    margin-top : 30px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #1D1D1B;
+    color: white;
 }
 
+/*---------------------------------------------------page5--------------------------------------------*/
+
+.page5{
+    height : 100vh;
+    display : flex;
+    flex-direction: column;
+    background-color: #FFFDF5;
+}
+.empty-sec{
+    flex : 1;
+    border-bottom: #000000;
+}
+.products-sec {
+    flex: 3;
+}
+.products-heading{
+    display: flex;
+    justify-content: space-between;
+    margin-right : 100px;
+    margin-left : 100px;
+}
+
+.products-heading p {
+    font-size: 36px ;
+}
+
+.products-heading button {
+    width : 80px;
+    height : 30px;
+    border : 0.5px solid black;
+    font-size : 12px;
+    border-radius: 5px;
+    background-color: #FFFDF5;
+}
