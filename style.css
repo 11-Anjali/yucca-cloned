@@ -152,24 +152,68 @@
 
 .page2 {
     display: flex;
-    height : 180vh;
+    position: relative;
+    height : 160vh;
     align-items: center;
-    justify-content: center;
     background-color: #DFDAC6;
     flex-direction: column;
+    
+}
+.con1 {
+    position: relative;
 }
 .bg {
     display: flex;
-    
+    position: relative;
+    z-index: 1;
+   height : 800px;
+   top : 0;
 }
-.bg img {
-    height : 800px;
+.marquee {
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+    top : 50%;
+    z-index: 2; 
+}
+
+.track-left {
+  display: inline-block;
+  animation: scroll 8s linear infinite;
+}
+.track-right {
+    animation : scrollright 8s linear infinite;
+}
+@keyframes scrollright {
+    0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+.track-left h1, .track-right h1 {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 .con2 {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     bottom : 0;
+    margin-top : 30px;
 }
 .t{
     display: flex;
@@ -186,6 +230,8 @@
     color: white;
 }
 
+
+/*-------------------------------------------page3-----------------------------------------------------*/
 .page3 {
     position: relative;
     height : 150vh;
@@ -203,8 +249,6 @@
     justify-content: center;
 }
 
-
-/*-------------------------------------------page3-----------------------------------------------------*/
 .images {
     position: absolute;
     top : 0;
