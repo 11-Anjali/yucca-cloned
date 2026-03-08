@@ -161,6 +161,8 @@
 }
 .con1 {
     position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 .bg {
     display: flex;
@@ -168,33 +170,26 @@
     z-index: 1;
    height : 800px;
    top : 0;
+   left : 20%;
 }
 .marquee {
     position: absolute;
     white-space: nowrap;
     width: 100%;
-    top : 50%;
+    top : 45%;
     z-index: 2; 
 }
 
 .track-left {
-  display: inline-block;
-  animation: scroll 8s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 .track-right {
-    animation : scrollright 8s linear infinite;
+    animation: scroll 10s linear infinite reverse;
 }
-@keyframes scrollright {
-    0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(50%);
-  }
-}
+
 .track-left h1, .track-right h1 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 56px;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 
@@ -238,7 +233,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    overflow: hidden;
 }
 .boxes3 {
     display: flex;
@@ -261,6 +256,7 @@
     opacity: 1;
     height: 100%;
     width: 100%;
+    
 }
 .im2, .im3{
     opacity: 0;
@@ -268,6 +264,7 @@
     width: 100%;
     height: 100%;
     transition: 0.5s ease;
+    transform: scale(1.1);
 }
 
 .cards{
@@ -281,6 +278,7 @@
     background-color: rgb(231 223 211 / 40%);
     backdrop-filter: blur(15px);
     transition: opacity 0.3s ease;
+    transition: 0.5s ease-out;
 }
 .cards:hover {
     height : 380px;
@@ -288,6 +286,7 @@
 }
 #c2:hover {
     width : 420px;
+    
 }
 #c3:hover {
     width: 430px;
@@ -295,10 +294,12 @@
 
 #c2:hover ~ .images .im2{
     opacity: 1;
+    transform: scale(1);
     /* transform: scaleY(90%); */
 }
 #c3:hover ~ .images .im3{
     opacity: 1;
+    transform: scale(1);
     /* transform: scaleY(97%); */
 }
 
@@ -314,18 +315,19 @@
     opacity: 0;
     height: 100%;
     width: 100%;
-    transition: opacity 0.4s ease-in;
+    transition: opacity 0.5s ease;
     border-radius : 15px;
 }
 .cards:hover .back2{
     opacity: 1;
 }
 
-.cards:hover .back2 .lines {
+.cards:hover .back2 .lines{
     font-size: 16px;
 }
 .lines {
     font-size: 14px;
+    transition: 0.2s ease-out;
 }
 .head1 {
     font-size: 32px;
@@ -333,7 +335,7 @@
     margin-top : 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    transform: translate(0);
+    transform: translateY(0);
 }
 .head1 p {
       transform: translateY(100%);
@@ -344,15 +346,15 @@
     margin-left : 20px;
     overflow: hidden;
     margin-bottom: 8px;
-    transform: translate(0);
+    transform: translateY(0);
+    
 }
 
 .lines p {
-    
     transform: translateY(100%);
+    transition: 0.5s ease-out;
 }
 .back2:hover p {
-    transition: 0.5s ease;
     transform: translateY(0);
     opacity: 1;
 }
@@ -437,4 +439,216 @@
     font-size : 12px;
     border-radius: 5px;
     background-color: #FFFDF5;
+}
+
+/*-----------------------page6--------------------------------------*/
+
+.page6{
+    height : 75vh;
+    background-color: #12271D;
+    color : white;
+}
+.upper{
+    display : flex;
+    height: 70%;
+    
+    gap : 60px;
+}
+.leftupper{
+    margin-left : 150px;
+    margin-top : 50px;
+}
+.leftupper p {
+    font-size : 45px;
+    font-weight: 300;
+}
+.rightupper img {
+    height : 400px;
+}
+.sliding{
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+}
+
+.trck {
+  animation: scroll 8s linear infinite;
+}
+.trck{
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 2px;
+ 
+  padding-top : 10px;
+  padding-bottom : 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.page7{
+    height : 120vh;
+    display: flex;
+    gap : 40px;
+    margin-left : 150px;
+    margin-right: 100px;
+}
+
+.lft, .rght{
+    width : 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap : 30px;
+    margin-top : 40px;
+}
+.lft p, .rght p {
+    font-size: 24px;
+    padding: 10px;
+    border-bottom : 0.5px solid grey;
+}
+.lft span {
+    font-size : 34px;
+    margin-bottom: 50px;
+}
+
+.rght span {
+    font-size : 12px;
+    margin-bottom: 65px;
+}
+
+.page8 {
+    height : 55vh;
+    background-color: #F7F4E9;
+    display: flex;
+    gap : 39px;
+    
+}
+.l, .r{
+    width : 50%;
+    display: flex;
+    
+    flex-direction: column;
+    gap : 30px;
+    margin-top : 40px;
+}
+.l p, .r p {
+     border-top: 0.5px solid grey;
+     padding : 10px;
+}
+.l {
+    font-size : 24px;
+    font-weight: 300;
+    margin-left : 150px;
+    padding-top: 60px;
+}
+.r{
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+    font-size : 18px;
+    margin-right: 100px;
+    justify-content: center;
+}
+.l button{
+    width : 60px;
+    height : 25px;
+    font-weight: 600;
+    font-size: 10px;
+    border-radius: 5px;
+    background-color: #1D1D1B;
+    color: white;
+}
+
+.page9{
+    height : 100vh;
+    background-color: #DFDAC6;
+}
+
+.tp {
+    display: flex;
+    justify-content: space-between;
+    margin-left : 150px;
+    margin-right: 150px;
+    height :45%;
+    color : #12271D;
+   
+}
+.tp p {
+    font-size: 40px;
+    margin-top : 50px;
+}
+.tp button {
+    height : 55px;
+    width : 55px;
+    rotate: 270deg;
+    margin-top : 60px;
+    border-radius: 10px;
+    background-color: #DFDAC6;
+    border: 0.5px solid black;
+
+}
+.bot {
+    display: flex;
+    margin-left : 150px;
+    margin-right: 150px;
+    gap : 20px;
+}
+.cars{
+    display: flex;
+    position: relative;;
+    width : 25%;
+    border: 1px solid black;
+    color : #12271D;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    
+}
+.cars1 img {
+    height : 250px;
+    width : 250px;
+}
+.cars1{
+    border-color: none;
+}
+.foot {
+    margin-left : 150px;
+    margin-right: 150px;
+    border : 1px solid black;
+    height: 50px;
+    margin-top : 25px;
+}
+.flip {
+    position: absolute;
+    opacity: 0%;
+    
+}
+
+.flip img {
+    width : 100%;
+    filter : brightness(0.8);
+
+
+}
+.cars:hover .flip{
+    opacity: 100%;
+    border-radius: 30px;
+    
+}
+.cars:hover .flip img{
+    border-radius: 30px;
+}
+.cars:hover .fr {
+    color : white;
+    opacity: 0;
 }
